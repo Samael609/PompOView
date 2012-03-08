@@ -3,7 +3,7 @@
 	*
 	*/
 	class Filtre_Nl extends Filtre {
-		protected $matchin = "\n{2,}";
-		protected $replace = "\n";
+		protected $matchin = "/\r?\n(\s$\r?\n)*/i";
+		protected $replace = "/\n";
 	}
 ?>

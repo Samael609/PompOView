@@ -1,5 +1,5 @@
 <?php
-	define( "DS"          , DIRECTORY_SEPARATOR );
+	define( "DS"          , "/" );
 	// Configuration général du serveur
 	
 	

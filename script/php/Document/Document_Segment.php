@@ -24,16 +24,14 @@
 		}
 
 		public function concat(Document_Segment $objet) {
-			$this->ox = $this->ox + $objet->ox;
-			$this->oy = $this->oy + $objet->oy;
-			$this->nx = $this->nx + $objet->nx;
-			$this->ny = $this->ny + $objet->ny;
+			$this->ox = $this->ox;
+			$this->oy = $objet->oy;
+			$this->nx = $this->nx;
+			$this->ny = $objet->ny;
 		}
 		
-		public function decoupe($coupure){		
-			echo $coupure; 		
+		public function decoupe($coupure){	
 			$new_coupure= floor(($this->oy-$this->ox+1)*$coupure/($this->ny-$this->nx+1));
-			echo ','.$new_coupure;
 			$segment1 = new Document_Segment(
 				$this->ox,
 				$this->ox+$coupure-1,

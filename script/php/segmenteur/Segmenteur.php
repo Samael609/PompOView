@@ -3,7 +3,7 @@
 	*
 	*/
 	abstract class Segment {
-	private $texte;
+	protected $texte=file_get_contents('../../index.php');
 
 	public function __construct($texte, $offset_list) {
 		$res = array();
